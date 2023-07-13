@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular TMB</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="script/tmb.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora de TMB</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>O que é Taxa Metabólica Basal?</h2>
+            <p>A taxa metabólica basal, é a quantidade de calorias que o seu corpo gasta diariamente em repouso para
+                apenas manter
+                as funções vitais do seu corpo. Esse valor pode variar, pois leva em consideração o seu peso, sua idade
+                e o seu sexo.</p>
+            <p>Calcular esses valores é importante para que você possa realizar um planejamneto alimentar, auxiliando
+                assim no ganho de peso, perda de peso ou manutenção do peso. Para ganho de peso, você deve ingerir mais
+                calorias do que o seu TMB, para manter é necessario consumir o valor calculado e para perca de peso
+                basta fazer um déficit calórico do valor da sua TMB.</p>
+        </article>
+        <section>
+            <h2>Nível de Atividade</h2>
+            <ul>
+                <li>Sedentário (Pouco ou nenhum exercício)</li>
+                <li>Levemente Ativo (Exercício leve - 1 a 3 dias por semana)</li>
+                <li>Moderadamente Ativo (Exercício Moderado - Faz esportes 3 a 5 dias por semana)</li>
+                <li>Altamente Ativo (Exercício Pesado - 5 a 6 dias por semana)</li>
+                <li>Extremamente Ativo (Exercício Pesado - Diariamente e até 2 vezes ao dia)</li>
+            </ul>
+
+            <h2>Calcule a sua Taxa Metabólica Basal</h2><br>
+            <p><strong>Fórmula utilizado para o cálculo (Harris-Benedecit):</strong><br>Homens -> TMB = 66 + (13.7 x
+                peso em quilogramas) + (5 x altura em centímetros) – (6.8 x idade em anos) <br> Mulheres -> TMB = 655 +
+                (9.6 X peso em quilogramas) + (1.8 X altura em centímetros) – (4.7 x idade em anos).</p><br>
+
+            <label for="sexo">Sexo:</label>
+            <select name="sexo" id="sexo">
+                <option value="0" disabled selected hidden>Selecione</option>
+                <option value="1">Homem</option>
+                <option value="2">Mulher</option>
+            </select>
+            <label for="atividade">Nível de Atividade</label>
+            <select name="atividade" id="atividade">
+                <option value="0" disabled selected hidden>Selecione</option>
+                <option value="1">Sedentário</option>
+                <option value="2">Levemente Ativo</option>
+                <option value="3">Moderadamente Ativo</option>
+                <option value="4">Altamente Ativo</option>
+                <option value="5">Extremamente Ativo</option>
+            </select>
+            <label for="peso">Qual seu peso?</label>
+            <input type="text" name="peso" id="peso" maxlength="6" inputmode="numeric" placeholder="Ex: 65 kg">
+            <label for="altura">Qual sua altura?</label>
+            <input type="text" name="altura" id="altura" maxlength="3" inputmode="numeric" placeholder="Ex: 170 cm">
+            <label for="idade">Qual sua idade?</label>
+            <input type="text" name="idade" id="idade" maxlength="3" inputmode="numeric" placeholder="Ex: 20">
+            <button onclick="return principal()">Calcular</button><br>
+        </section>
+        <div id="res"></div>
+    </main>
+    <footer>
+        <p>Criado por <a href="https://github.com/guilherme-wagner" target="_blank">Guilherme Wagner</a> como forma
+            de aprendizado.</p>
+    </footer>
+</body>
+
+</html>
