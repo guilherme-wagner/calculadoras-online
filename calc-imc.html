@@ -14,13 +14,26 @@
     <header>
         <h1>Calculadora de IMC</h1>
     </header>
+    <nav>
+        <a href="index.html">Home</a> 
+        <a href="calc-tmb.html">Calcular taxa metabólica basal</a>
+        <a href="calc-bf.html">Calcular BF</a>
+    </nav>
     <main>
         <article>
             <h2>O que é o IMC?</h2>
             <p>O IMC (Índice de Massa Corporal), refere-se a um cálculo para descobrir se uma pessoa está no seu peso
                 ideal, considerando sua altura e o seu peso. Apesar de ser uma maneira muito usual, é importante
                 compreender que o IMC não é considerado a forma ideal para avaliar o peso, visto que não leva em
-                consideração a composição corporal.</p> <br>
+                consideração a composição corporal.</p>
+        </article>
+        <section>
+            <h2>Calcule o seu IMC</h2>
+            <label for="peso">Qual seu peso?</label>
+            <input type="text" name="peso" id="peso" maxlength="6" inputmode="numeric" placeholder="Ex: 70 Kg">
+            <label for="altura">Qual sua altura?</label>
+            <input type="text" name="altura" id="altura" maxlength="3" inputmode="numeric" placeholder="Ex: 165 cm">
+            <button type="button" onclick="principal()">Calcular</button><br>
 
             <h2>Interpretação do IMC</h2> <br>
             <table>
@@ -55,21 +68,12 @@
                     <td class="alinhar">III</td>
                 </tr>
             </table>
-        </article>
-
-        <section>
-            <h2>Calcule o seu IMC</h2><br>
-            <label for="peso">Qual seu peso?</label>
-            <input type="text" name="peso" id="peso" maxlength="6" inputmode="numeric" placeholder="Ex: 70 Kg">
-            <label for="altura">Qual sua altura?</label>
-            <input type="text" name="altura" id="altura" maxlength="3" inputmode="numeric" placeholder="Ex: 165 cm">
-            <button type="button" onclick="principal()">Calcular</button><br>
         </section>
 
         <div id="res"></div>
     </main>
     <footer>
-        <p>Criado por <a href="https://github.com/guilherme-wagner" target="_blank">Guilherme Wagner</a> como forma
+        <p>Criado por <a href="https://github.com/guilherme-wagner" target="_blank" class="git">Guilherme Wagner</a> como forma
             de aprendizado.</p>
     </footer>
 </body>

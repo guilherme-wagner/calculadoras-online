@@ -14,6 +14,11 @@
     <header>
         <h1>Calculadora de BF</h1>
     </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="calc-imc.html">Calcular IMC</a>
+        <a href="calc-tmb.html">Calcular TMB</a>
+    </nav>
     <main>
         <article>
             <h2>O que é BF?</h2>
@@ -21,6 +26,32 @@
                 possui. É a proporção que existe de gordura e músculo em nosso corpo. O BF é um componente essencial da
                 composição corporal e desempenha um papel fundamental na regulamentação do metabolismo, isolamento
                 térmico e proteção de órgãos vitais.</p>
+        </article>
+        <section>
+            <h2>Calcule o seu BF</h2>
+            <p><strong>Importante:</strong> Todas as medidas devem ser feitas ao acordar; A medida da cintura deve
+                ser feita na altura do umbigo soltando todo o ar, sem necessidade de murchar a barriga, apenas
+                soltar todo ar; A medida do pescoço deve ser feita logo acima do trapézio, tome cuidado para não
+                levar o trapézio em consideração, isso pode aumentar o erro da medida, fazendo com que o seu BF
+                pareça abaixo do que ele realmente é; A medida do Quadril, só é feita para as mulheres, e deve-se
+                levar em consideração a maior medida possível.</p><br>
+
+            <label for="sexo">Sexo:</label>
+            <select name="sexo" id="sexo">
+                <option value="1" disabled selected hidden>Selecione</option>
+                <option value="2">Homem</option>
+                <option value="3">Mulher</option>
+            </select>
+            <label for="pescoco">Medida do Pescoço:</label>
+            <input type="text" name="pescoco" id="pescoco" maxlength="2" inputmode="numeric" placeholder="Ex: 35 cm">
+            <label for="cintura">Medida da Cintura:</label>
+            <input type="text" name="cintura" id="cintura" maxlength="3" inputmode="numeric" placeholder="Ex: 87 cm">
+            <label for="altura">Altura:</label>
+            <input type="text" name="altura" id="altura" maxlength="3" inputmode="numeric" placeholder="Ex: 180 cm">
+            <label for="quadril">Quadril:</label>
+            <input type="text" name="quadril" id="quadril" maxlength="3" inputmode="numeric" placeholder="Ex: 105 cm">
+            <button onclick="return principal()">Calcular</button>
+
             <h2>Interpretação do BF</h2> <br>
             <table>
                 <tr>
@@ -54,37 +85,13 @@
                     <td class="alinhar">A partir de 25%</td>
                 </tr>
             </table>
-        </article>
-        <section>
-                <h2>Calcule o seu BF</h2>
-                <p><strong>Importante:</strong> Todas as medidas devem ser feitas ao acordar; A medida da cintura deve
-                    ser feita na altura do umbigo soltando todo o ar, sem necessidade de murchar a barriga, apenas
-                    soltar todo ar; A medida do pescoço deve ser feita logo acima do trapézio, tome cuidado para não
-                    levar o trapézio em consideração, isso pode aumentar o erro da medida, fazendo com que o seu BF
-                    pareça abaixo do que ele realmente é; A medida do Quadril, só é feita para as mulheres, e deve-se
-                    levar em consideração a maior medida possível.</p><br>
-
-                <label for="sexo">Sexo:</label>
-                <select name="sexo" id="sexo">
-                    <option value="1" disabled selected hidden>Selecione</option>
-                    <option value="2">Homem</option>
-                    <option value="3">Mulher</option>
-                </select>
-                <label for="pescoco">Medida do Pescoço:</label>
-                <input type="text" name="pescoco" id="pescoco" maxlength="2" inputmode="numeric" placeholder="Ex: 35 cm">
-                <label for="cintura">Medida da Cintura:</label>
-                <input type="text" name="cintura" id="cintura" maxlength="3" inputmode="numeric" placeholder="Ex: 87 cm">
-                <label for="altura">Altura:</label>
-                <input type="text" name="altura" id="altura" maxlength="3" inputmode="numeric" placeholder="Ex: 180 cm">
-                <label for="quadril">Quadril:</label>
-                <input type="text" name="quadril" id="quadril" maxlength="3" inputmode="numeric" placeholder="Ex: 105 cm">
-                <button onclick="return principal()">Calcular</button><br>
         </section>
 
         <div id="res"></div>
     </main>
     <footer>
-        <p>Criado por <a href="https://github.com/guilherme-wagner" target="_blank">Guilherme Wagner</a> como forma
+        <p>Criado por <a href="https://github.com/guilherme-wagner" target="_blank" class="git">Guilherme Wagner</a>
+            como forma
             de aprendizado.</p>
     </footer>
 </body>
